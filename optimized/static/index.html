@@ -62,12 +62,12 @@
             <h2>What is Guest Posting?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
 
-             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600" alt="Team collaboration in a modern office setting">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Team collaboration in a modern office setting" loading="lazy">
 
              <h2>Benefits</h2>
              <p>Lorem ipsum dolor sit amet...</p>
 
-             <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600" alt="Graph showing upward trend representing benefits of guest posting">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800" alt="Graph showing upward trend representing benefits of guest posting" loading="lazy">
 
              <!-- INLINE AD -->
              <div class="inline-ad">
@@ -77,7 +77,7 @@
                  <p>Discover tools that can help you create better content and grow your audience faster.</p>
                  <a href="#" class="inline-ad__cta">Learn More</a>
                </div>
-               <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=400" alt="Blogging tools advertisement">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=400" alt="Blogging tools advertisement" loading="lazy">
              </div>
 
              <h2>Getting Started</h2>
@@ -110,7 +110,7 @@
                    <p>Discover tools to improve your content creation and reach more readers.</p>
                    <a href="#" class="content-ad__cta">Explore Now</a>
                  </div>
-                 <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=300" alt="Writing tools advertisement">
+                  <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=300" alt="Writing tools advertisement" loading="lazy">
                </div>
 
                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -136,7 +136,7 @@
                    <p>Learn advanced techniques to improve your search engine rankings.</p>
                    <a href="#" class="content-ad__cta">Get Started</a>
                  </div>
-                 <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=300" alt="SEO tools advertisement">
+                  <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=300" alt="SEO tools advertisement" loading="lazy">
                </div>
 
                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -159,31 +159,10 @@
             <button class="share__btn share__btn--tw">t</button>
           </section>
 
-          <section class="related">
-            <h2>You May Also Like</h2>
-
-             <div class="related__grid">
-               <div class="related__card">
-                 <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=800" alt="Analytics dashboard showing performance metrics">
-                 <p>Understanding Google Ads Quality Score</p>
-               </div>
-
-               <div class="related__card">
-                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800" alt="Group of people collaborating on ideas">
-                 <p>Building a Blogging Community</p>
-               </div>
-
-               <div class="related__card">
-                 <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800" alt="Business networking event with professionals">
-                 <p>Networking for Bloggers</p>
-               </div>
-
-               <div class="related__card">
-                 <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=800" alt="Person writing in a notebook with laptop">
-                 <p>Tips for Beginner Bloggers</p>
-               </div>
-             </div>
-          </section>
+           <section class="related lazy-load" data-src="related.json">
+             <h2>You May Also Like</h2>
+             <div id="related-loading">Loading related posts...</div>
+           </section>
 
         </article>
 
@@ -227,93 +206,35 @@
         <!-- AUTHOR -->
          <div class="widget">
            <h3>About the Author</h3>
-           <img class="widget__avatar" src="https://i.pravatar.cc/100" alt="Author profile picture">
+            <img class="widget__avatar" src="https://i.pravatar.cc/100" alt="Author profile picture" loading="lazy">
            <p>
              John Doe is a digital marketer and blogger who shares insights about SEO, content strategy, and web performance.
            </p>
          </div>
 
-        <!-- POPULAR -->
-        <div class="widget">
-          <h3>Popular Posts</h3>
-
-           <div class="post-list">
-             <div class="post-list__item">
-               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=300" alt="SEO improvement concept">
-               <div>
-                 <p>How to Improve SEO in 2026</p>
-               </div>
-             </div>
-
-             <div class="post-list__item">
-               <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=300" alt="Web performance metrics dashboard">
-               <div>
-                 <p>Core Web Vitals Explained</p>
-               </div>
-             </div>
-
-             <div class="post-list__item">
-               <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=300" alt="Content strategy planning">
-               <div>
-                 <p>Content Strategy Guide</p>
-               </div>
-             </div>
-           </div>
-        </div>
-
-        <!-- LATEST -->
-        <div class="widget">
-          <h3>Latest Posts</h3>
-
-           <div class="post-list">
-             <div class="post-list__item">
-               <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=300" alt="AI technology for content creation">
-               <div>
-                 <p>AI for Content Writing</p>
-               </div>
-             </div>
-
-             <div class="post-list__item">
-               <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=300" alt="Website performance optimization">
-               <div>
-                 <p>Improving Website Performance</p>
-               </div>
-             </div>
-
-             <div class="post-list__item">
-               <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=300" alt="Beginner blogger learning">
-               <div>
-                 <p>Beginner Blogging Tips</p>
-               </div>
-             </div>
-           </div>
-        </div>
-
-        <!-- ADS -->
-         <div class="widget widget--ads">
-           <h3>Advertisement</h3>
-           <div class="ads-grid">
-             <div class="ad-item">
-               <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=300" alt="Digital marketing tools advertisement">
-               <p>Boost your SEO with our tools</p>
-             </div>
-             <div class="ad-item">
-               <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=300" alt="Content creation advertisement">
-               <p>Create engaging content faster</p>
-             </div>
-             <div class="ad-item">
-               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=300" alt="Analytics dashboard advertisement">
-               <p>Track your blog performance</p>
-             </div>
-           </div>
+         <!-- POPULAR -->
+         <div class="widget lazy-load" data-src="popular.json">
+           <h3>Popular Posts</h3>
+           <div id="popular-loading">Loading popular posts...</div>
          </div>
 
-         <!-- PARTNERSHIP -->
-         <div class="widget widget--partnership">
-           <h3>Partnership Opportunities</h3>
-           <p>Interested in collaborating? We partner with bloggers, brands, and agencies for guest posts, sponsored content, and affiliate marketing.</p>
-           <a href="#" class="partnership-cta">Get in Touch</a>
+         <!-- LATEST -->
+         <div class="widget lazy-load" data-src="latest.json">
+           <h3>Latest Posts</h3>
+           <div id="latest-loading">Loading latest posts...</div>
          </div>
+
+         <!-- ADS -->
+          <div class="widget widget--ads lazy-load" data-src="ads.json">
+            <h3>Advertisement</h3>
+            <div id="ads-loading">Loading advertisements...</div>
+          </div>
+
+          <!-- PARTNERSHIP -->
+          <div class="widget widget--partnership lazy-load" data-src="partnership.json">
+            <h3>Partnership Opportunities</h3>
+            <div id="partnership-loading">Loading partnership info...</div>
+          </div>
 
        </aside>
 

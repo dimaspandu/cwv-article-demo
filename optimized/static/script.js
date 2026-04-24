@@ -180,6 +180,134 @@ function handleReplySubmit(event, parentCommentId) {
   }
 }
 
+// Function to fetch data from JSON
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+}
+
+// Function to render related posts
+function renderRelated(data) {
+  const container = document.querySelector('.related');
+  if (!container || !data) return;
+
+  const html = `
+    <div class="related__grid">
+      ${data.map(item => `
+        <div class="related__card">
+          <img src="${item.img}" alt="${item.alt}" loading="lazy">
+          <p>${item.title}</p>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  container.innerHTML = `<h2>You May Also Like</h2>${html}`;
+}
+
+// Function to render post list (popular/latest)
+function renderPostList(data, title) {
+  if (!data) return '';
+
+  return `
+    <div class="post-list">
+      ${data.map(item => `
+        <div class="post-list__item">
+          <img src="${item.img}" alt="${item.alt}" loading="lazy">
+          <div>
+            <p>${item.title}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// Function to render ads
+function renderAds(data) {
+  if (!data) return '';
+
+  return `
+    <div class="ads-grid">
+      ${data.map(item => `
+        <div class="ad-item">
+          <img src="${item.img}" alt="${item.alt}" loading="lazy">
+          <p>${item.text}</p>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// Function to render partnership
+function renderPartnership(data) {
+  if (!data) return '';
+
+  return `
+    <p>${data.text}</p>
+    <a href="${data.href}" class="partnership-cta">${data.cta}</a>
+  `;
+}
+
+// Lazy load function
+function lazyLoadSection(entry) {
+  const element = entry.target;
+  const src = element.getAttribute('data-src');
+
+  if (src) {
+    fetchData(src).then(data => {
+      let html = '';
+
+      if (element.classList.contains('related')) {
+        renderRelated(data);
+      } else if (element.querySelector('#popular-loading')) {
+        html = renderPostList(data);
+        element.innerHTML = `<h3>Popular Posts</h3>${html}`;
+      } else if (element.querySelector('#latest-loading')) {
+        html = renderPostList(data);
+        element.innerHTML = `<h3>Latest Posts</h3>${html}`;
+      } else if (element.querySelector('#ads-loading')) {
+        html = renderAds(data);
+        element.innerHTML = `<h3>Advertisement</h3>${html}`;
+      } else if (element.querySelector('#partnership-loading')) {
+        html = renderPartnership(data);
+        element.innerHTML = `<h3>Partnership Opportunities</h3>${html}`;
+      }
+
+      element.classList.remove('lazy-load');
+      element.removeAttribute('data-src');
+    });
+  }
+}
+
+// Initialize lazy loading
+function initLazyLoading() {
+  const lazyElements = document.querySelectorAll('.lazy-load');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          lazyLoadSection(entry);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '50px' });
+
+    lazyElements.forEach(element => observer.observe(element));
+  } else {
+    // Fallback for browsers without IO
+    lazyElements.forEach(lazyLoadSection);
+  }
+}
+
 // Initialize dynamic content when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', async function() {
   // Fetch and render comments
@@ -197,4 +325,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   if (commentsContainer) {
     commentsContainer.addEventListener('click', handleReplyClick);
   }
+
+  // Initialize lazy loading for sections
+  initLazyLoading();
 });

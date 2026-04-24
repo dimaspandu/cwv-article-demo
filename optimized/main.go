@@ -11,5 +11,5 @@ func main() {
 		http.ServeFile(w, r, "./static/index.html")
 	})
 
-	http.ListenAndServe(":5173", nil)
+	http.ListenAndServe(":5174", nil)
 }
