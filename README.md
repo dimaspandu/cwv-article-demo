@@ -98,11 +98,11 @@ go run main.go
 4. Test both mobile and desktop configurations
 
 ### Core Web Vitals Metrics to Monitor
-- **First Contentful Paint (FCP)**: <1.8s (good), <3.0s (needs improvement)
+- **First Contentful Paint (FCP)**: <1.8s (good), < 3.0s (needs improvement)
 - **Largest Contentful Paint (LCP)**: <2.5s (good), <4.0s (needs improvement)
 - **Cumulative Layout Shift (CLS)**: <0.1 (good), <0.25 (needs improvement)
 - **Total Blocking Time (TBT)**: <200ms (good), <600ms (needs improvement)
-- **Speed Index (SI)**: <3.4s (good), <5.8s (needs improvement)
+- **Speed Index (SI)**: < 3.4s (good), <5.8s (needs improvement)
 
 ### Testing Checklist
 - [ ] Test on desktop (1920x1080)
