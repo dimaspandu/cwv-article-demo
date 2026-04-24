@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Alex",
+    "date": "2024",
+    "text": "This was really insightful, thanks!",
+    "replies": [
+      {
+        "id": 2,
+        "name": "Author",
+        "date": "2024",
+        "text": "Thanks for your feedback!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Jordan",
+    "date": "2024",
+    "text": "I've been trying guest posting and this helps a lot.",
+    "replies": []
+  },
+  {
+    "id": 4,
+    "name": "Taylor",
+    "date": "2024",
+    "text": "Great explanation, very clear.",
+    "replies": []
+  },
+  {
+    "id": 5,
+    "name": "Chris",
+    "date": "2024",
+    "text": "Interesting perspective on SEO.",
+    "replies": []
+  },
+  {
+    "id": 6,
+    "name": "Morgan",
+    "date": "2024",
+    "text": "I learned something new today.",
+    "replies": []
+  },
+  {
+    "id": 7,
+    "name": "Jamie",
+    "date": "2024",
+    "text": "This is super helpful!",
+    "replies": []
+  },
+  {
+    "id": 8,
+    "name": "Riley",
+    "date": "2024",
+    "text": "Thanks for sharing your experience.",
+    "replies": []
+  },
+  {
+    "id": 9,
+    "name": "Casey",
+    "date": "2024",
+    "text": "I agree with this approach.",
+    "replies": []
+  },
+  {
+    "id": 10,
+    "name": "Sam",
+    "date": "2024",
+    "text": "Excellent article on guest posting strategies.",
+    "replies": []
+  },
+  {
+    "id": 11,
+    "name": "Drew",
+    "date": "2024",
+    "text": "This changed how I approach content marketing.",
+    "replies": []
+  },
+  {
+    "id": 12,
+    "name": "Pat",
+    "date": "2024",
+    "text": "Very practical advice here.",
+    "replies": []
+  },
+  {
+    "id": 13,
+    "name": "Lee",
+    "date": "2024",
+    "text": "I bookmarked this for future reference.",
+    "replies": []
+  },
+  {
+    "id": 14,
+    "name": "Kai",
+    "date": "2024",
+    "text": "Clear and actionable tips.",
+    "replies": []
+  },
+  {
+    "id": 15,
+    "name": "Robin",
+    "date": "2024",
+    "text": "Thanks for the detailed breakdown!",
+    "replies": []
+  },
+  {
+    "id": 16,
+    "name": "Sky",
+    "date": "2024",
+    "text": "This is exactly what I needed.",
+    "replies": []
+  },
+  {
+    "id": 17,
+    "name": "Avery",
+    "date": "2024",
+    "text": "Great insights on building authority.",
+    "replies": []
+  },
+  {
+    "id": 18,
+    "name": "Frank",
+    "date": "2024",
+    "text": "I appreciate the real-world examples.",
+    "replies": []
+  },
+  {
+    "id": 19,
+    "name": "Dana",
+    "date": "2024",
+    "text": "This article is a game-changer.",
+    "replies": []
+  },
+  {
+    "id": 20,
+    "name": "Terry",
+    "date": "2024",
+    "text": "Well-written and informative.",
+    "replies": []
+  }
+]
