@@ -64,14 +64,14 @@ cwv-article-demo/
 ```bash
 cd heavy
 go run main.go
-# Server runs on http://localhost:5175
+# Server runs on http://localhost:5173
 ```
 
 #### Optimized Version
 ```bash
 cd optimized
 go run main.go
-# Server runs on http://localhost:5175
+# Server runs on http://localhost:5174
 ```
 
 #### Mobile-Optimized Version
@@ -85,7 +85,7 @@ go run main.go
 ```bash
 cd server-optimized
 go run main.go
-# Server runs on http://localhost:5175
+# Server runs on http://localhost:5176
 # Includes gzip compression and minification
 ```
 
@@ -131,9 +131,9 @@ go run main.go
 
 ## Development Notes
 
-### File Naming Convention
-- Each version folder contains `OPTIMIZATION_SUMMARY.md` (except heavy uses `BASELINE_REPORT.md`)
-- Root contains `FINAL_OPTIMIZATION_REPORT.md` for complete overview
+### Documentation Structure
+- Each version folder contains `README.md` with detailed optimization steps and results
+- Root contains `REPORT.md` for complete journey summary
 - Static assets are version-specific
 
 ### Go Server Features
