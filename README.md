@@ -7,22 +7,22 @@ A progressive web performance optimization demonstration project showing the evo
 ```
 cwv-article-demo/
 ├── heavy/                    # Baseline unoptimized version
-│   ├── main.go              # Basic Go server
-│   ├── static/              # Static assets
-│   └── OPTIMIZATION_SUMMARY.md # Baseline report (renamed)
+│   ├── main.go               # Basic Go server
+│   ├── static/               # Static assets
+│   └── README.md             # Baseline report
 ├── optimized/                # Desktop-optimized version
 │   ├── main.go
 │   ├── static/
-│   └── OPTIMIZATION_SUMMARY.md
+│   └── README.md
 ├── mobile-optimized/         # Mobile-optimized version
 │   ├── main.go
 │   ├── static/
-│   └── OPTIMIZATION_SUMMARY.md
+│   └── README.md
 ├── server-optimized/         # Server-optimized version
-│   ├── main.go              # Enhanced Go server with compression/minification
+│   ├── main.go               # Enhanced Go server with compression/minification
 │   ├── static/
-│   └── OPTIMIZATION_SUMMARY.md
-├── FINAL_OPTIMIZATION_REPORT.md # Complete journey summary
+│   └── README.md
+├── REPORT.md                 # Complete journey summary
 └── README.md                 # This file
 ```
 
